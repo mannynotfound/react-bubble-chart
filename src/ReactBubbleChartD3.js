@@ -249,7 +249,7 @@ export default class ReactBubbleChartD3 {
         if (2*d.r < this.smallDiameter) size = 'small';
         else if (2*d.r < this.mediumDiameter) size = 'medium';
         else size = 'large';
-        return 'bubble-label ' + size
+        return 'bubble-label ' + size + ' ' + d.className
       })
       // we can pass in a fontSizeFactor here to set the label font-size as a factor of its corresponding circle's radius; this overrides CSS font-size styles set with the small, medium and large classes
       .style('font-size', d => fontFactor ? fontFactor *  d.r + 'px' : null);
@@ -274,7 +274,7 @@ export default class ReactBubbleChartD3 {
           if (2*d.r < this.smallDiameter) size = 'small';
           else if (2*d.r < this.mediumDiameter) size = 'medium';
           else size = 'large';
-          return 'bubble-label ' + size
+          return 'bubble-label ' + size + ' ' + d.className
         })
         .text(d => d.displayText || d._id)
         .on('click', (d, i) => {d3.event.stopPropagation(); props.onClick(d)})

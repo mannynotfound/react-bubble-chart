@@ -123,6 +123,7 @@ The data objects themselves look like:
    displayText: string,// will use _id if undefined
    colorValue: number, // used to determine color
    selected: boolean,  // if true will use selectedColor/selectedTextColor for circle/text
+   className: string, // optional class to add to bubble
 }
 ```
 
